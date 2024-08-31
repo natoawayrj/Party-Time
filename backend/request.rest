@@ -1,0 +1,98 @@
+//inserindo uma requisição, primeira coisa é o método, no caso o post e logo após o endereço do localhost, depois o tipo de conteúdo, nese caso json, e embaixo a forma como o objeto vai chegar da api em formato json
+
+
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+  {
+      "name": "Decoração",
+      "description": "Escolha a decoração para sua festa, e nós a montamos.",
+      "price": 1400,
+      "image": "https://images.unsplash.com/photo-1478146059778-26028b07395a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=892&q=80"
+    }
+###
+GET http://localhost:3000/api/services
+
+###
+
+GET http://localhost:3000/api/services/66bb6e7d4989bedbdb7b6cf7
+
+###
+DELETE http://localhost:3000/api/services/66bb6e7d4989bedbdb7b6cf
+
+###
+PUT  http://localhost:3000/api/services/66bb6e7d4989bedbdb7b6cf7
+Content-Type: application/json
+
+{
+    "name": "TESTE ATUALIZAÇÃO", 
+    "description": "descrição",
+    "price": 1410,
+    "image": "https://conteudo.imguol.com.br/c/entretenimento/f1/2018/10/22/jogos-de-luta-1540238711552_v2_300x300.jpg.webp"
+}
+
+###
+POST  http://localhost:3000/api/parties
+Content-Type: application/json
+
+{
+    "title": "Minha Festa",
+    "author": "Eu", 
+    "description": "Festa de fim de ano",
+    "budget": 9500,
+    "image":"https://conteudo.imguol.com.br/c/entretenimento/f1/2018/10/22/jogos-de-luta-1540238711552_v2_300x300.jpg.webp",
+    "services": [
+        {
+          "name": "Algum serviço", 
+          "description": "Oi vidado!",
+          "price": 1410,
+          "image": "https://conteudo.imguol.com.br/c/entretenimento/f1/2018/10/22/jogos-de-luta-1540238711552_v2_300x300.jpg.webp"
+        },
+        {
+          "name": "Algum serviço 2", 
+          "description": "descrição",
+          "price": 3500,
+          "image": "https://conteudo.imguol.com.br/c/entretenimento/f1/2018/10/22/jogos-de-luta-1540238711552_v2_300x300.jpg.webp"
+        }
+
+    ]
+
+}
+
+###
+GET http://localhost:3000/api/parties
+
+###
+Get http://localhost:3000/api/parties/66be0fcdb768db2d3b3ea9c4
+
+###
+DELETE http://localhost:3000/api/parties/66be1134b768db2d3b3ea9ce
+
+###
+PUT  http://localhost:3000/api/parties/666bb6e7d4989bedbdb7b6cf7
+Content-Type: application/json
+
+{
+    "title": "Minha Festa",
+    "author": "Eu", 
+    "description": "Festa de fim de ano",
+    "budget": 9500,
+    "image":"https://conteudo.imguol.com.br/c/entretenimento/f1/2018/10/22/jogos-de-luta-1540238711552_v2_300x300.jpg.webp",
+    "services": [
+        {
+          "name": "Algum serviço", 
+          "description": "Oi vidado!",
+          "price": 1410,
+          "image": "https://conteudo.imguol.com.br/c/entretenimento/f1/2018/10/22/jogos-de-luta-1540238711552_v2_300x300.jpg.webp"
+        },
+        {
+          "name": "Algum serviço 2", 
+          "description": "descrição",
+          "price": 3500,
+          "image": "https://conteudo.imguol.com.br/c/entretenimento/f1/2018/10/22/jogos-de-luta-1540238711552_v2_300x300.jpg.webp"
+        }
+
+    ]
+
+}
+
